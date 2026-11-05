@@ -46,12 +46,13 @@ NEXT_PUBLIC_PRODUCT_NAME=TiclaSec
 NEXT_PUBLIC_PRODUCT_LONG_NAME=AI Threat Collection & Intelligence System
 PLAYWRIGHT_ENABLED=false
 TICLASEC_RESEARCH_MODE=false
-DEFAULT_MODEL=openrouter/deepseek/deepseek-chat
-OPENROUTER_API_KEY=<provider key>
+DEFAULT_MODEL=gpt-4o-mini
+OPENAI_API_KEY=<your existing OpenAI API key>
 ```
 
-Provider and enrichment keys not in use may remain empty. Keep production
-values in Coolify, never in a committed `.env` file.
+Provider and enrichment keys not in use may remain empty. OpenRouter remains
+optional and is not used unless an OpenRouter model is explicitly selected.
+Keep production values in Coolify, never in a committed `.env` file.
 
 ## First administrator
 

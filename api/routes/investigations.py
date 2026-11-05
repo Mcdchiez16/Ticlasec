@@ -728,7 +728,7 @@ class IntelligenceScopeRequest(BaseModel):
 
 class InvestigationRequest(BaseModel):
     query: str = Field(..., min_length=3, max_length=500, description="Search query (3-500 chars)")
-    model: str = Field(default="openrouter/deepseek/deepseek-chat", description="LLM model ID to use")
+    model: str = Field(default="gpt-4o-mini", description="LLM model ID to use")
     run_crawler: bool = False
     depth: Literal["fast", "standard", "deep"] = "standard"
     intelligence_scope: IntelligenceScopeRequest = Field(
@@ -1365,7 +1365,7 @@ async def _get_investigation_model_choice(model: Optional[str]) -> tuple[str, An
         selected_model = (
             model
             or config_module.DEFAULT_MODEL
-            or "openrouter/deepseek/deepseek-chat"
+            or "gpt-4o-mini"
         )
         return selected_model, model_choices
 

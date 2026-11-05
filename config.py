@@ -394,7 +394,7 @@ DEFAULT_MODELS = {
 
 DEFAULT_MODEL = os.getenv(
     "DEFAULT_MODEL",
-    "openrouter/deepseek/deepseek-chat"
+    "gpt-4o-mini"
 )
 
 REQUIRED_KEYS = [

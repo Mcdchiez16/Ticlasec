@@ -86,7 +86,7 @@ services:
       WHATSAPP_APP_SECRET: ${WHATSAPP_APP_SECRET:-}
       WHATSAPP_VERIFY_TOKEN: ${WHATSAPP_VERIFY_TOKEN:-}
       WHATSAPP_API_VERSION: ${WHATSAPP_API_VERSION:-}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?Set your OpenAI API key in Coolify}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
       GROQ_API_KEY: ${GROQ_API_KEY:-}
@@ -94,7 +94,7 @@ services:
       OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
       HETZNER_API_KEY: ${HETZNER_API_KEY:-}
       HETZNER_BASE_URL: ${HETZNER_BASE_URL:-https://inference.hetzner.com/api/v1}
-      DEFAULT_MODEL: ${DEFAULT_MODEL:-openrouter/deepseek/deepseek-chat}
+      DEFAULT_MODEL: ${DEFAULT_MODEL:-gpt-4o-mini}
       OTX_API_KEY: ${OTX_API_KEY:-}
       VT_API_KEY: ${VT_API_KEY:-}
       ABUSECH_API_KEY: ${ABUSECH_API_KEY:-}

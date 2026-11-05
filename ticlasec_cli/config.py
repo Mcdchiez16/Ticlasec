@@ -76,8 +76,8 @@ PROVIDER_ENV = {
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "llm": {
-        "provider": "openrouter",
-        "model": "openrouter/deepseek/deepseek-chat",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
         "api_key": "",
     },
     "enrichment_keys": {k: "" for k in ENRICHMENT_KEYS},

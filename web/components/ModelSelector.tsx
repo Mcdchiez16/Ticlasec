@@ -503,7 +503,7 @@ aria-selected={displayModelId === m.id}
                 </p>
               )}
               <p className="mt-1 font-mono text-[9px] text-[var(--text-muted)]">
-                Default: DeepSeek Chat via OpenRouter (fast, affordable, no refusals)
+                Default: GPT-4o mini via your OpenAI API key
               </p>
               <button
                 type="button"

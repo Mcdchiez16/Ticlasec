@@ -157,7 +157,7 @@ class TestInvestigationsPost(unittest.TestCase):
     def test_request_model_defaults_to_none(self):
         from api.routes.investigations import InvestigationRequest
         req = InvestigationRequest(query="test")
-        self.assertEqual(req.model, "openrouter/deepseek/deepseek-chat")
+        self.assertEqual(req.model, "gpt-4o-mini")
 
 
 # ===========================================================================

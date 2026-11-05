@@ -1327,7 +1327,7 @@ At least one LLM provider key is needed for query refinement, result filtering, 
 
 | Variable | Default | Notes |
 |---|---|---|
-| `DEFAULT_MODEL` | `openrouter/deepseek/deepseek-chat` | Model ID used when the request does not specify one. Format: `provider/model-name` |
+| `DEFAULT_MODEL` | `gpt-4o-mini` | Model ID used when the request does not specify one. Provider-prefixed IDs are supported where required. |
 | `OPENAI_API_KEY` | — | Enables GPT-4o, GPT-4o Mini, etc. |
 | `ANTHROPIC_API_KEY` | — | Enables Claude models |
 | `GOOGLE_API_KEY` | — | Enables Gemini models |
