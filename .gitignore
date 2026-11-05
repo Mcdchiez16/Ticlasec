@@ -312,6 +312,7 @@ test_*.py
 /tmp/ticlasec_*.log
 chroma_db/
 /data/seed_data.json.gz
+!/data/seed_data.json.gz
 coverage/
 *.pytest_tmp
 cti_data/enterprise-attack.json
