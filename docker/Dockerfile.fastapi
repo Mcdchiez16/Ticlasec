@@ -1,0 +1,167 @@
+# ============================================================
+# TiclaSec FastAPI Dockerfile (Optimized)
+# Cold build: ~5 min | Warm rebuild: ~30s
+# ============================================================
+
+# --- Build Arguments ---
+ARG PLAYWRIGHT_ENABLED=false
+
+# --- Builder stage ---
+FROM python:3.11-slim AS builder
+
+ARG PLAYWRIGHT_ENABLED=false
+
+WORKDIR /app
+
+# Install build dependencies (apt) with cache mount
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy project metadata and source for installation from the authoritative
+# dependency manifest in pyproject.toml.
+COPY pyproject.toml README.md alembic.ini ./
+COPY api/ api/
+COPY analysis/ analysis/
+COPY auth/ auth/
+COPY channels/ channels/
+COPY crawler/ crawler/
+COPY db/ db/
+COPY export/ export/
+COPY extractor/ extractor/
+COPY fingerprint/ fingerprint/
+COPY graph/ graph/
+COPY i18n/ i18n/
+COPY intelligence_scope/ intelligence_scope/
+COPY benchmark/ benchmark/
+COPY credential_presence/ credential_presence/
+COPY data/ data/
+COPY feeds/ feeds/
+COPY freshness/ freshness/
+COPY hygiene/ hygiene/
+COPY index_population/ index_population/
+COPY ingest/ ingest/
+COPY jobqueue/ jobqueue/
+COPY monitor/ monitor/
+COPY netpool/ netpool/
+COPY observability/ observability/
+COPY owned_index/ owned_index/
+COPY pacing/ pacing/
+COPY progress/ progress/
+COPY ratelimit/ ratelimit/
+COPY scraper/ scraper/
+COPY research_evaluation/ research_evaluation/
+COPY sanitizer/ sanitizer/
+COPY search/ search/
+COPY shared_corpus/ shared_corpus/
+COPY snapshot_store/ snapshot_store/
+COPY sources/ sources/
+COPY synthetic/ synthetic/
+COPY trust_gate/ trust_gate/
+COPY utils/ utils/
+COPY vector/ vector/
+COPY ticlasec/ ticlasec/
+COPY ticlasec_cli/ ticlasec_cli/
+COPY scripts/import_seed.py scripts/import_seed.py
+COPY scripts/reset_password.py scripts/reset_password.py
+COPY docker/docker-entrypoint.sh docker/docker-entrypoint.sh
+COPY config.py .
+
+# Install the base application only. Heavy NLP/vector and browser dependencies
+# remain opt-in through the package extras and PLAYWRIGHT_ENABLED.
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install .
+
+# Install the actively used spaCy model in the disposable builder so pip's
+# download cache never becomes part of the production image.
+RUN --mount=type=cache,target=/root/.cache/pip \
+    python -c "import spacy; spacy.load('en_core_web_sm')" 2>/dev/null || \
+    python -m spacy download en_core_web_sm
+
+# Install Playwright only if explicitly enabled (opt-in)
+# Always create /ms-playwright so COPY --from=builder doesn't fail when disabled
+RUN mkdir -p /ms-playwright && \
+    if [ "$PLAYWRIGHT_ENABLED" = "true" ]; then \
+        pip install playwright && \
+        PLAYWRIGHT_BROWSERS_PATH=/ms-playwright playwright install chromium && \
+        PLAYWRIGHT_BROWSERS_PATH=/ms-playwright playwright install-deps chromium; \
+    fi
+
+# --- Runtime stage ---
+FROM python:3.11-slim
+
+ARG PLAYWRIGHT_ENABLED=false
+
+WORKDIR /app
+
+# Chromium libraries are installed solely when the optional Playwright
+# renderer is enabled. The ordinary API needs no extra OS packages.
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    if [ "$PLAYWRIGHT_ENABLED" = "true" ]; then \
+        apt-get update && \
+        apt-get install -y --no-install-recommends \
+        libglib2.0-0 libnss3 libnspr4 libdbus-1-3 libatk1.0-0 \
+        libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 \
+        libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 \
+        libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 && \
+        rm -rf /var/lib/apt/lists/*; \
+    fi
+
+# Create non-root user for security
+RUN groupadd --gid 1000 ticlasec && \
+    useradd --uid 1000 --gid ticlasec --shell /bin/bash --create-home ticlasec
+
+# Copy Python packages from builder
+COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
+
+# Create directories and set ownership early
+RUN mkdir -p /data /app /ms-playwright && chown -R ticlasec:ticlasec /app /data /ms-playwright
+
+# Copy ms-playwright from builder
+COPY --from=builder /ms-playwright /ms-playwright
+
+# Copy the reviewed seed snapshot shipped with the application.
+COPY --from=builder /app/data/seed_data.json.gz /data/seed_data.json.gz
+
+# Copy only the reviewed backend source assembled in the builder. Frontend,
+# documentation, tests, and local artifacts never enter the API image.
+COPY --from=builder --chown=ticlasec:ticlasec /app /app
+
+# Ensure chroma_db directory exists and is owned by the app user
+# (ChromaDB creates it at runtime; pre-creating avoids root-ownership from bind mounts)
+RUN mkdir -p /app/chroma_db && chown -R ticlasec:ticlasec /app/chroma_db
+
+# Ensure data directory exists for monitors.yaml and other runtime-written files.
+# This directory is mounted as a named Docker volume in docker-compose so it is
+# always writable by the ticlasec user regardless of the host bind-mount.
+RUN mkdir -p /app/data && chown -R ticlasec:ticlasec /app/data
+
+# Environment variables
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+ENV DATABASE_URL=postgresql://ticlasec:ticlasec@postgres:5432/ticlasec
+ENV TOR_PROXY_HOST=tor
+ENV TOR_PROXY_PORT=9050
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+
+EXPOSE 8000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)" || exit 1
+
+# Make entrypoint scripts executable
+RUN chmod +x /app/docker/docker-entrypoint.sh \
+    && chmod +x /app/docker/*.sh 2>/dev/null || true
+
+# Switch to non-root user
+USER ticlasec
+
+ENTRYPOINT ["/app/docker/docker-entrypoint.sh"]
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-proxy-headers"]

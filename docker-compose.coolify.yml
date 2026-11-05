@@ -1,0 +1,163 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ticlasec
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a long random hexadecimal password in Coolify}
+      POSTGRES_DB: ticlasec
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ticlasec -d ticlasec"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  tor:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.tor
+    restart: unless-stopped
+    volumes:
+      - tor_data:/var/lib/tor
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; s=socket.socket(); s.settimeout(5); s.connect(('127.0.0.1', 9050)); s.close()"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  whatsapp-bridge:
+    build: ./whatsapp-bridge
+    restart: unless-stopped
+    environment:
+      BACKEND_URL: http://fastapi:8000
+      WHATSAPP_MAX_SESSIONS: ${WHATSAPP_MAX_SESSIONS:-10}
+    volumes:
+      - whatsapp_sessions:/data
+      - whatsapp_bridge_secrets:/run/bridge-secrets
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8090/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.fastapi
+      args:
+        PLAYWRIGHT_ENABLED: ${PLAYWRIGHT_ENABLED:-false}
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "/app/docker/docker-entrypoint.sh"]
+    command: ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-proxy-headers"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      tor:
+        condition: service_healthy
+    environment:
+      PRODUCT_NAME: ${PRODUCT_NAME:-TiclaSec}
+      DATABASE_URL: postgresql://ticlasec:${POSTGRES_PASSWORD}@postgres:5432/ticlasec
+      JWT_SECRET: ${JWT_SECRET:?Set a random 64-character or longer secret in Coolify}
+      TICLASEC_MFA_KEY: ${TICLASEC_MFA_KEY:?Set a URL-safe base64 32-byte key in Coolify}
+      TICLASEC_RESEARCH_MODE: ${TICLASEC_RESEARCH_MODE:-false}
+      TICLASEC_TRUSTED_PROXIES: ${TICLASEC_TRUSTED_PROXIES:-0}
+      TICLASEC_GLOBAL_RATE_LIMIT: ${TICLASEC_GLOBAL_RATE_LIMIT:-120}
+      TICLASEC_USER_RATE_LIMIT: ${TICLASEC_USER_RATE_LIMIT:-120}
+      TICLASEC_QUEUE_WORKERS: ${TICLASEC_QUEUE_WORKERS:-1}
+      TICLASEC_RSS_SNIPPET_ONLY: ${TICLASEC_RSS_SNIPPET_ONLY:-0}
+      TOR_PROXY_HOST: tor
+      TOR_PROXY_PORT: 9050
+      TOR_ISOLATION_SOCKS_PORT: 9250
+      WHATSAPP_MODE: ${WHATSAPP_MODE:-qr}
+      WHATSAPP_BRIDGE_URL: http://whatsapp-bridge:8090
+      WHATSAPP_BRIDGE_SECRET_FILE: /run/bridge-secrets/bridge.key
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_BOT_USERNAME: ${TELEGRAM_BOT_USERNAME:-}
+      TELEGRAM_WEBHOOK_SECRET: ${TELEGRAM_WEBHOOK_SECRET:-}
+      WHATSAPP_ACCESS_TOKEN: ${WHATSAPP_ACCESS_TOKEN:-}
+      WHATSAPP_PHONE_NUMBER_ID: ${WHATSAPP_PHONE_NUMBER_ID:-}
+      WHATSAPP_BUSINESS_NUMBER: ${WHATSAPP_BUSINESS_NUMBER:-}
+      WHATSAPP_APP_SECRET: ${WHATSAPP_APP_SECRET:-}
+      WHATSAPP_VERIFY_TOKEN: ${WHATSAPP_VERIFY_TOKEN:-}
+      WHATSAPP_API_VERSION: ${WHATSAPP_API_VERSION:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+      HETZNER_API_KEY: ${HETZNER_API_KEY:-}
+      HETZNER_BASE_URL: ${HETZNER_BASE_URL:-https://inference.hetzner.com/api/v1}
+      DEFAULT_MODEL: ${DEFAULT_MODEL:-openrouter/deepseek/deepseek-chat}
+      OTX_API_KEY: ${OTX_API_KEY:-}
+      VT_API_KEY: ${VT_API_KEY:-}
+      ABUSECH_API_KEY: ${ABUSECH_API_KEY:-}
+      ABUSEIPDB_API_KEY: ${ABUSEIPDB_API_KEY:-}
+      GREYNOISE_API_KEY: ${GREYNOISE_API_KEY:-}
+      URLSCAN_API_KEY: ${URLSCAN_API_KEY:-}
+      SECURITYTRAILS_API_KEY: ${SECURITYTRAILS_API_KEY:-}
+      HYBRID_ANALYSIS_API_KEY: ${HYBRID_ANALYSIS_API_KEY:-}
+      BLOCKCYPHER_TOKEN: ${BLOCKCYPHER_TOKEN:-}
+      ETHERSCAN_API_KEY: ${ETHERSCAN_API_KEY:-}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      GITLAB_TOKEN: ${GITLAB_TOKEN:-}
+      SCRAPINGANT_API_KEY: ${SCRAPINGANT_API_KEY:-}
+      SCRAPINGANT_PROXY_USERNAME: ${SCRAPINGANT_PROXY_USERNAME:-}
+      SCRAPINGANT_PROXY_PASSWORD: ${SCRAPINGANT_PROXY_PASSWORD:-}
+      SCRAPINGANT_PROXY_TYPE: ${SCRAPINGANT_PROXY_TYPE:-residential}
+      TICLASEC_USE_PROXIES: ${TICLASEC_USE_PROXIES:-false}
+      TICLASEC_USE_PROXY: ${TICLASEC_USE_PROXY:-false}
+      MEILI_HOST: ${MEILI_HOST:-}
+      MEILI_KEY: ${MEILI_KEY:-}
+      MEILI_INDEX: ${MEILI_INDEX:-onion_pages}
+      DEEPL_API_KEY: ${DEEPL_API_KEY:-}
+      I18N_LANGUAGES: ${I18N_LANGUAGES:-en,ru,zh}
+      PLAYWRIGHT_ENABLED: ${PLAYWRIGHT_ENABLED:-false}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - whatsapp_bridge_secrets:/run/bridge-secrets:ro
+      - monitors_data:/app/data
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"]
+      interval: 10s
+      timeout: 5s
+      start_period: 240s
+      retries: 5
+
+  nextjs:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.nextjs
+      args:
+        NEXT_PUBLIC_PRODUCT_NAME: ${NEXT_PUBLIC_PRODUCT_NAME:-TiclaSec}
+        NEXT_PUBLIC_PRODUCT_LONG_NAME: ${NEXT_PUBLIC_PRODUCT_LONG_NAME:-AI Threat Collection & Intelligence System}
+    restart: unless-stopped
+    depends_on:
+      fastapi:
+        condition: service_healthy
+    environment:
+      NEXT_PUBLIC_API_URL: http://fastapi:8000
+      JWT_SECRET: ${JWT_SECRET}
+    expose:
+      - "3000"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
+
+volumes:
+  postgres_data:
+  monitors_data:
+  tor_data:
+  whatsapp_sessions:
+  whatsapp_bridge_secrets:

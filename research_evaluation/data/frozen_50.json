@@ -1,0 +1,362 @@
+{
+  "manifest": {
+    "documents": 50,
+    "unique_documents": 50,
+    "minimum_word_count": 124,
+    "maximum_word_count": 146,
+    "dataset_sha256": "c4f1a6228611512fe769206d732ab08dcead5ebf20ebd420bdb2bf782a9be7b1",
+    "notice": "Synthetic corpus. Generator labels are private construction evidence, not adjudicated human gold labels."
+  },
+  "documents": [
+    {
+      "id": "SYN-001",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Lantern Crew 01 claimed that the malware EmberLoader-01 encrypted files during a simulated incident. The claimed target was Example Lusaka Services 01, an invented Zambian organisation based in Lusaka. The post said initial access followed exploitation of CVE-2099-7001. It identified node-001[.]example as a command-and-control address and 192.0.2[.]21 as a test callback address. A fictional sample was identified by SHA-256 0f2ebb32550d37f8a3b829cb6ff15a80ce24336a7da2fe1da5279147d7304778. The contact address shown in the exercise was contact001[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "67bfe3254027d655ed001147c41a84bc82666d9ce9fa84c46d7221b66ee980f4",
+      "word_count": 135
+    },
+    {
+      "id": "SYN-002",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Copper Viper 02 claimed that the malware CopperLock-02 encrypted files during a simulated incident. The claimed target was Example Ndola Services 02, an invented Zambian organisation based in Ndola. The post said initial access followed exploitation of CVE-2099-7002. It identified node-002[.]example as a command-and-control address and 192.0.2[.]22 as a test callback address. A fictional sample was identified by SHA-256 e374305991d1157a05fe13e6a4d8285458f5849ec27276eb592b33db5050d9fb. The contact address shown in the exercise was contact002[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "9546ed20267e5fc42efffc476a57e4d05d9613530510cde306d61b73c26bf27d",
+      "word_count": 135
+    },
+    {
+      "id": "SYN-003",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Mosi Shadow 03 claimed that the malware MosiStealer-03 encrypted files during a simulated incident. The claimed target was Example Kitwe Services 03, an invented Zambian organisation based in Kitwe. The post said initial access followed exploitation of CVE-2099-7003. It identified node-003[.]example as a command-and-control address and 192.0.2[.]23 as a test callback address. A fictional sample was identified by SHA-256 826713ad6c591b8c98a8d40d6885077d4b50b85088f85f2d00249d5676ef5d40. The contact address shown in the exercise was contact003[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "ac40193170ecd626fc6b91f4641dedefd566b09c911101082a3acfee71ced7bf",
+      "word_count": 135
+    },
+    {
+      "id": "SYN-004",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Kafue Fox 04 claimed that the malware KafueCrypt-04 encrypted files during a simulated incident. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The post said initial access followed exploitation of CVE-2099-7004. It identified node-004[.]example as a command-and-control address and 192.0.2[.]24 as a test callback address. A fictional sample was identified by SHA-256 cafa38dca211a5dcab9caba05820b74a00c89dd8bf1d88398ea46244ae9d44a4. The contact address shown in the exercise was contact004[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "e14dc460fb5ed8041272c761adac39b140a62aae1c9129f79ceee12355369fd5",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-005",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Zambezi Raven 05 claimed that the malware ZedRat-05 encrypted files during a simulated incident. The claimed target was Example Kabwe Services 05, an invented Zambian organisation based in Kabwe. The post said initial access followed exploitation of CVE-2099-7005. It identified node-005[.]example as a command-and-control address and 192.0.2[.]25 as a test callback address. A fictional sample was identified by SHA-256 fef80b36748271f7edca1987117fa33c8033497e5151ea66efd9d205f92c0c7c. The contact address shown in the exercise was contact005[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "0f47f2efafa19a49f435692e404080e5f023e96d078eff35fee8a2d5cb95c8ce",
+      "word_count": 135
+    },
+    {
+      "id": "SYN-006",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Luangwa Wolf 06 claimed that the malware LuangwaDropper-06 encrypted files during a simulated incident. The claimed target was Example Chipata Services 06, an invented Zambian organisation based in Chipata. The post said initial access followed exploitation of CVE-2099-7006. It identified node-006[.]example as a command-and-control address and 192.0.2[.]26 as a test callback address. A fictional sample was identified by SHA-256 f35ee927b1b381d2e01470e9e57518478c7155c2552eb6421cd583c63557757c. The contact address shown in the exercise was contact006[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "1782b365f62b8031ff0108946fc308965ab22ac78d13ff24c045d5251a8ca78e",
+      "word_count": 135
+    },
+    {
+      "id": "SYN-007",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Mukuba Spider 07 claimed that the malware MukubaLocker-07 encrypted files during a simulated incident. The claimed target was Example Solwezi Services 07, an invented organisation outside Zambia, and the text gave no Zambian connection. The post said initial access followed exploitation of CVE-2099-7007. It identified node-007[.]example as a command-and-control address and 192.0.2[.]27 as a test callback address. A fictional sample was identified by SHA-256 2f49a6b537e1b8230ab16f8025a7217458c123c197bfe69036dd4a2b99e2a243. The contact address shown in the exercise was contact007[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "b3c94fb3c713e21093b825051db345a967c04bcb65901660e581e950414adb57",
+      "word_count": 140
+    },
+    {
+      "id": "SYN-008",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Chambeshi Lynx 08 claimed that the malware ChambeshiBot-08 encrypted files during a simulated incident. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The post said initial access followed exploitation of CVE-2099-7008. It identified node-008[.]example as a command-and-control address and 192.0.2[.]28 as a test callback address. A fictional sample was identified by SHA-256 3f31a5b22880677412d7f3882e55855a7fc430edba7c84c549703d17b1b1079f. The contact address shown in the exercise was contact008[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "3defb3674baf2a66229d1876abd7ea054723b43124ce60e4defa6f52f6a97c6c",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-009",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A forum post attributed to the fictional threat actor Kalambo Ghost 09 claimed that the malware KalamboKit-09 encrypted files during a simulated incident. The claimed target was Example Lusaka Services 09, an invented Zambian organisation based in Lusaka. The post said initial access followed exploitation of CVE-2099-7009. It identified node-009[.]example as a command-and-control address and 192.0.2[.]29 as a test callback address. A fictional sample was identified by SHA-256 1d60be9bfb8b15f919d1e2165549b0aa9a7996cfdbb6f7534ad7b78c722ead81. The contact address shown in the exercise was contact009[@]example[.]org. The source did not independently prove the claim, the actor identity or the stated impact. Analysts must treat the content as an unverified source claim and use it only for controlled annotation and platform testing.",
+      "source_class": "synthetic",
+      "content_sha256": "dee094dd7fb85a4417a119911f653162a98ccda886e2e8f82d0a5c884464aedc",
+      "word_count": 135
+    },
+    {
+      "id": "SYN-010",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Lantern Crew 10 advertised a bundle of browser sessions and account logins. The claimed target was Example Ndola Services 10, an invented Zambian organisation based in Ndola. The seller claimed that the records were collected by the fictional tool EmberLoader-10 and offered contact through contact010[@]example[.]org. The listing referred buyers to node-010[.]example and displayed 192.0.2[.]30 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value ac7b0906bdeca7a81526a0f9893c9c7c60c965744159f8056a489eaaf8069d36; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "51ec8ed5ee325881da8586c4fa856cb58fcfab6ecc81516c3435bd6ed0f11554",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-011",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Copper Viper 11 advertised a bundle of browser sessions and account logins. The claimed target was Example Kitwe Services 11, an invented Zambian organisation based in Kitwe. The seller claimed that the records were collected by the fictional tool CopperLock-11 and offered contact through contact011[@]example[.]org. The listing referred buyers to node-011[.]example and displayed 192.0.2[.]31 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value 7d1a1221a181d208ff8dddfdf73dc449b6de383cc193e86b312f28d0e08c0374; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "c59b790c876581e4f5a03024e743242a7f61e8a9d3e3bcb29ce447e120fbe2da",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-012",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Mosi Shadow 12 advertised a bundle of browser sessions and account logins. The claimed target was Example Livingstone Services 12, an invented Zambian organisation based in Livingstone. The seller claimed that the records were collected by the fictional tool MosiStealer-12 and offered contact through contact012[@]example[.]org. The listing referred buyers to node-012[.]example and displayed 192.0.2[.]32 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value 642bd55396f6ef193100d4aedd9756c6f3d8f39b7e00abd79e80152ab8966150; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "ff12011daeee22ea206fd9b0c1042cd91d33434384f4beff3813fa03e8f13a69",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-013",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Kafue Fox 13 advertised a bundle of browser sessions and account logins. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The seller claimed that the records were collected by the fictional tool KafueCrypt-13 and offered contact through contact013[@]example[.]org. The listing referred buyers to node-013[.]example and displayed 192.0.2[.]33 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value 104678d8df8b00bf34d0b720dcc615f6fa883126b2b313cfb7edf6246941a628; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "7c3b6502162ce52ebfacf9ee2c64066154335e73b49799fcc46d16c8698edb68",
+      "word_count": 143
+    },
+    {
+      "id": "SYN-014",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Zambezi Raven 14 advertised a bundle of browser sessions and account logins. The claimed target was Example Chipata Services 14, an invented Zambian organisation based in Chipata. The seller claimed that the records were collected by the fictional tool ZedRat-14 and offered contact through contact014[@]example[.]org. The listing referred buyers to node-014[.]example and displayed 192.0.2[.]34 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value 6b9673c37d8b164a4782ac606088a269c588682a1960b6f148af9ecc27894c24; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "37c0af4b5f59a51624b39263bf283a241a8b53c6fc0ca4cf3ffd2a43041f346f",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-015",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Luangwa Wolf 15 advertised a bundle of browser sessions and account logins. The claimed target was Example Solwezi Services 15, an invented Zambian organisation based in Solwezi. The seller claimed that the records were collected by the fictional tool LuangwaDropper-15 and offered contact through contact015[@]example[.]org. The listing referred buyers to node-015[.]example and displayed 192.0.2[.]35 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value a29cecb9637b13b07b0691ec27932e8d5dbba5cb200282837981acf2587dcc00; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "92b3cd3f0856d76043ab04eff3d8ba613a0df1654a2cf5b4b1c9f33f5f086323",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-016",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Mukuba Spider 16 advertised a bundle of browser sessions and account logins. The claimed target was Example Mongu Services 16, an invented organisation outside Zambia, and the text gave no Zambian connection. The seller claimed that the records were collected by the fictional tool MukubaLocker-16 and offered contact through contact016[@]example[.]org. The listing referred buyers to node-016[.]example and displayed 192.0.2[.]36 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value 3d35ac698345bb942f2899d206888284175885bc550a9ac1042d6246a125936b; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "eeb51d8e433daf6057b576a5c8a87d50dacad3c7a66d1e6dacbc1f24b50794fe",
+      "word_count": 144
+    },
+    {
+      "id": "SYN-017",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Chambeshi Lynx 17 advertised a bundle of browser sessions and account logins. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The seller claimed that the records were collected by the fictional tool ChambeshiBot-17 and offered contact through contact017[@]example[.]org. The listing referred buyers to node-017[.]example and displayed 192.0.2[.]37 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value beb5572b5ef93da9035739e506c7dcdab720f0866d9199e299ae0f55065e8f4c; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "1e70c6bf26627a589dab9314632df3aa66ce484f54bfd54cd7bc121cb9aaa136",
+      "word_count": 143
+    },
+    {
+      "id": "SYN-018",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A marketplace listing posted by the fictional seller Kalambo Ghost 18 advertised a bundle of browser sessions and account logins. The claimed target was Example Ndola Services 18, an invented Zambian organisation based in Ndola. The seller claimed that the records were collected by the fictional tool KalamboKit-18 and offered contact through contact018[@]example[.]org. The listing referred buyers to node-018[.]example and displayed 192.0.2[.]38 as a test panel address. A downloadable-looking entry was represented only by the safe SHA-256 value 80b9bef5758efd86fd05727bf7b9bc108c6382ab212cb847363576886b7c7da7; no file is attached or available. The listing made no independently verified statement about a real victim, and it contained no usable credentials. The document exists only to test credential-sale classification, entity extraction, evidence checking and neutral summarisation.",
+      "source_class": "synthetic",
+      "content_sha256": "924fca1ac4f8cacf8099746d4294a2a9231e0ddea79a8ae488088f9dacac161e",
+      "word_count": 139
+    },
+    {
+      "id": "SYN-019",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Lantern Crew 19. The claimed target was Example Kitwe Services 19, an invented Zambian organisation based in Kitwe. The message claimed that a fake login page at node-019[.]example collected entries and sent test notifications to contact019[@]example[.]org. It identified 192.0.2[.]39 as simulated hosting infrastructure and named EmberLoader-19 as the kit used to prepare the page. A test archive was represented by SHA-256 72d384e28fdb9015721ba25cfd163a329bd7959c5a2e452f1f5f5cbdfa0e23dd. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "f51b56d92eb3825a7854b2f4b33a19f940dd6946c1e154371ce373879eb5e5b7",
+      "word_count": 141
+    },
+    {
+      "id": "SYN-020",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Copper Viper 20. The claimed target was Example Livingstone Services 20, an invented Zambian organisation based in Livingstone. The message claimed that a fake login page at node-020[.]example collected entries and sent test notifications to contact020[@]example[.]org. It identified 192.0.2[.]40 as simulated hosting infrastructure and named CopperLock-20 as the kit used to prepare the page. A test archive was represented by SHA-256 b91aed0807492c42a63e218b5335494861a1f7ab90827a0024d13e4d6328a3ab. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "6252717809710f11b52f41e15271a58544d205c0eb365830363f1e61725ecb30",
+      "word_count": 141
+    },
+    {
+      "id": "SYN-021",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Mosi Shadow 21. The claimed target was Example Kabwe Services 21, an invented Zambian organisation based in Kabwe. The message claimed that a fake login page at node-021[.]example collected entries and sent test notifications to contact021[@]example[.]org. It identified 192.0.2[.]41 as simulated hosting infrastructure and named MosiStealer-21 as the kit used to prepare the page. A test archive was represented by SHA-256 4e215c376ba7ebf6cd18e586c773b1fe6b21c1f89780f3eb20e5993787fe2020. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "aadcc57011f24c02f0162f20ac6a154a00e5a5d9d141bd9047233fbffa499874",
+      "word_count": 141
+    },
+    {
+      "id": "SYN-022",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Kafue Fox 22. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The message claimed that a fake login page at node-022[.]example collected entries and sent test notifications to contact022[@]example[.]org. It identified 192.0.2[.]42 as simulated hosting infrastructure and named KafueCrypt-22 as the kit used to prepare the page. A test archive was represented by SHA-256 55328b736c85d72ad16b9e8326da6c748c0cbb261b052c384702867c1a709289. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "1f9e2012f759cac33a735876c7bbd58acec5a746cd294b45af35cd88cf3ea92c",
+      "word_count": 145
+    },
+    {
+      "id": "SYN-023",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Zambezi Raven 23. The claimed target was Example Solwezi Services 23, an invented Zambian organisation based in Solwezi. The message claimed that a fake login page at node-023[.]example collected entries and sent test notifications to contact023[@]example[.]org. It identified 192.0.2[.]43 as simulated hosting infrastructure and named ZedRat-23 as the kit used to prepare the page. A test archive was represented by SHA-256 85541c20af7a31ba36b1416833a86309c4979c00bbc840474a0447d240524be7. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "0a2ed6234b72cf7863a2e0faa393ed5b4379af63ae28a2ad97a23149a975d620",
+      "word_count": 141
+    },
+    {
+      "id": "SYN-024",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Luangwa Wolf 24. The claimed target was Example Mongu Services 24, an invented Zambian organisation based in Mongu. The message claimed that a fake login page at node-024[.]example collected entries and sent test notifications to contact024[@]example[.]org. It identified 192.0.2[.]44 as simulated hosting infrastructure and named LuangwaDropper-24 as the kit used to prepare the page. A test archive was represented by SHA-256 002d7131eabca9956eacc2d0527cd07ff296f68253f432d58c1d8cd68c2bd465. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "c27e466dcddf35ecb7470ce53b90ed66ba1a8718dc47497361df39bcc6a821da",
+      "word_count": 141
+    },
+    {
+      "id": "SYN-025",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Mukuba Spider 25. The claimed target was Example Lusaka Services 25, an invented organisation outside Zambia, and the text gave no Zambian connection. The message claimed that a fake login page at node-025[.]example collected entries and sent test notifications to contact025[@]example[.]org. It identified 192.0.2[.]45 as simulated hosting infrastructure and named MukubaLocker-25 as the kit used to prepare the page. A test archive was represented by SHA-256 783768ed1eca52d8ff0d5a945934e2b1dd0f6ecd3f650e164ab18d425bdd03ea. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "9af8411b347f6f53d62f310083518c09005a94f0d646cc359d47e3984f658b8a",
+      "word_count": 146
+    },
+    {
+      "id": "SYN-026",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A fictional discussion described a phishing campaign operated under the name Chambeshi Lynx 26. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The message claimed that a fake login page at node-026[.]example collected entries and sent test notifications to contact026[@]example[.]org. It identified 192.0.2[.]46 as simulated hosting infrastructure and named ChambeshiBot-26 as the kit used to prepare the page. A test archive was represented by SHA-256 45c3231010ae0dfca7367654eee57de05ce44745c96278684784541672537765. The document contains no active page, no real victim information and no working credential. Its statements are unverified and must not be treated as proof that an attack occurred. The purpose is to test fraud classification, supported indicator extraction and detection of invented details in summaries.",
+      "source_class": "synthetic",
+      "content_sha256": "702438f3c7628c4da4654266089e4aa9cbbc862f09ee015c0886f5c939d1e319",
+      "word_count": 145
+    },
+    {
+      "id": "SYN-027",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Kalambo Ghost 27 offered unauthorised-access and denial-of-service services for payment. The claimed target was Example Kitwe Services 27, an invented Zambian organisation based in Kitwe. The advert used contact027[@]example[.]org for contact and node-027[.]example as a defanged ordering page. It displayed 192.0.2[.]47 as a demonstration endpoint and mentioned CVE-2099-7027 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named KalamboKit-27, and its safe test hash was 36efacf3ada1ff9e66c911955834c61e2f7e1ea34359fd6a4047c164d9cc6f30. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "d1ee922492f40fb03afbdafde99e3683cde860a702ed999c681c4c480aa4e2d1",
+      "word_count": 136
+    },
+    {
+      "id": "SYN-028",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Lantern Crew 28 offered unauthorised-access and denial-of-service services for payment. The claimed target was Example Livingstone Services 28, an invented Zambian organisation based in Livingstone. The advert used contact028[@]example[.]org for contact and node-028[.]example as a defanged ordering page. It displayed 192.0.2[.]48 as a demonstration endpoint and mentioned CVE-2099-7028 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named EmberLoader-28, and its safe test hash was 4777437c1446e510a7bc55d8359ebfaffdf1e12c73818ecd541b787c86bdd7c0. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "5ad4e31f6dd0f0f1be79827d205fe2dd06c5a503e8311c0d10c5e112e8d2e067",
+      "word_count": 136
+    },
+    {
+      "id": "SYN-029",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Copper Viper 29 offered unauthorised-access and denial-of-service services for payment. The claimed target was Example Kabwe Services 29, an invented Zambian organisation based in Kabwe. The advert used contact029[@]example[.]org for contact and node-029[.]example as a defanged ordering page. It displayed 192.0.2[.]49 as a demonstration endpoint and mentioned CVE-2099-7029 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named CopperLock-29, and its safe test hash was 9197be89981254d7e89fc19dc8c47ad1e2d6733c6e6d5ade189675fe182d4f78. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "4d4295cd0208ada3d4e0deaa2196b0866ddb97b8e4bee968386e31ec69da739d",
+      "word_count": 136
+    },
+    {
+      "id": "SYN-030",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Mosi Shadow 30 offered unauthorised-access and denial-of-service services for payment. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The advert used contact030[@]example[.]org for contact and node-030[.]example as a defanged ordering page. It displayed 192.0.2[.]50 as a demonstration endpoint and mentioned CVE-2099-7030 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named MosiStealer-30, and its safe test hash was 7dc3a1c625496eeadeb63330d7dfbb6cfebe5c96e4ee1e4a2c7b6b4f04241567. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "b1a25383e88f3bb54ba38f10c7b65712e7650be96f74075c33cb2ebfba3e4083",
+      "word_count": 140
+    },
+    {
+      "id": "SYN-031",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Kafue Fox 31 offered unauthorised-access and denial-of-service services for payment. The claimed target was Example Solwezi Services 31, an invented Zambian organisation based in Solwezi. The advert used contact031[@]example[.]org for contact and node-031[.]example as a defanged ordering page. It displayed 192.0.2[.]51 as a demonstration endpoint and mentioned CVE-2099-7031 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named KafueCrypt-31, and its safe test hash was 0d0d7966bb884203102dc4429941d84031878e70d52f5e4393d10aa8e5b85129. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "9472cc23c2d25af9c85b1e661ddb15cf5520c966abb0c16c15ec11f8109c3e97",
+      "word_count": 136
+    },
+    {
+      "id": "SYN-032",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Zambezi Raven 32 offered unauthorised-access and denial-of-service services for payment. The claimed target was Example Mongu Services 32, an invented Zambian organisation based in Mongu. The advert used contact032[@]example[.]org for contact and node-032[.]example as a defanged ordering page. It displayed 192.0.2[.]52 as a demonstration endpoint and mentioned CVE-2099-7032 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named ZedRat-32, and its safe test hash was 9efee9d1f41721e5e0a7279480a4ac0a0aac8fb74346969e0fbc982e2c428912. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "5adffaa683dd3bdaac796be1045b7e7217166b7849096c26fa759d3ee28bf39c",
+      "word_count": 136
+    },
+    {
+      "id": "SYN-033",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Luangwa Wolf 33 offered unauthorised-access and denial-of-service services for payment. The claimed target was Example Lusaka Services 33, an invented organisation outside Zambia, and the text gave no Zambian connection. The advert used contact033[@]example[.]org for contact and node-033[.]example as a defanged ordering page. It displayed 192.0.2[.]53 as a demonstration endpoint and mentioned CVE-2099-7033 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named LuangwaDropper-33, and its safe test hash was 28372a53cb30939a6feb299440328b6e480f8f24b1876fb9ad58ead7ea34efea. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "cfb35f54740fdc1ee9cf78059915aa64533cc6d8daea3b0717a1581cedeeafbc",
+      "word_count": 141
+    },
+    {
+      "id": "SYN-034",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. An advertisement by the fictional operator Mukuba Spider 34 offered unauthorised-access and denial-of-service services for payment. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The advert used contact034[@]example[.]org for contact and node-034[.]example as a defanged ordering page. It displayed 192.0.2[.]54 as a demonstration endpoint and mentioned CVE-2099-7034 as an example vulnerability, without proving that any system was exploited. The fictional toolkit was named MukubaLocker-34, and its safe test hash was 60a83b36e1d460fabca5db8a3c200d1b32ecfd3ab9d16abb0975bff5e544a6cc. The document contains no instructions, functional exploit, active target or payment mechanism. It was created to test whether the platform can distinguish an advertised hacking service from confirmed activity and preserve the difference in its summary.",
+      "source_class": "synthetic",
+      "content_sha256": "a53a7947dc96b2fd009fd394753722501e51c036a322b4e1a102a11f241c6bf3",
+      "word_count": 140
+    },
+    {
+      "id": "SYN-035",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Chambeshi Lynx 35 claimed to hold internal records. The claimed target was Example Kitwe Services 35, an invented Zambian organisation based in Kitwe. The post directed readers to node-035[.]example and listed contact035[@]example[.]org for fictional negotiations. It identified 192.0.2[.]55 as a test mirror and used SHA-256 34b6718077c195ae7b2dd9d6479d9de322cd8f22199ee28d24db04882355ccb8 as the identifier for a non-existent sample. The post also mentioned ChambeshiBot-35 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "a0126ca2234852bfecc197b60e4e646a15ccac3af432365e95796f4df21b37be",
+      "word_count": 133
+    },
+    {
+      "id": "SYN-036",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Kalambo Ghost 36 claimed to hold internal records. The claimed target was Example Livingstone Services 36, an invented Zambian organisation based in Livingstone. The post directed readers to node-036[.]example and listed contact036[@]example[.]org for fictional negotiations. It identified 192.0.2[.]56 as a test mirror and used SHA-256 582020fee7198b3830322ba12f23e7d67f2b16fe035c15a881d5a2ff3a351d27 as the identifier for a non-existent sample. The post also mentioned KalamboKit-36 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "cbbd2860c59bf5629785b1dde731db04f84828ffc657ee63b25dd1322e615025",
+      "word_count": 133
+    },
+    {
+      "id": "SYN-037",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Lantern Crew 37 claimed to hold internal records. The claimed target was Example Kabwe Services 37, an invented Zambian organisation based in Kabwe. The post directed readers to node-037[.]example and listed contact037[@]example[.]org for fictional negotiations. It identified 192.0.2[.]57 as a test mirror and used SHA-256 5ec3c6dcf915e2a90b422d2fd48c68fcedac58ab53ba523048af2ecf63e003b7 as the identifier for a non-existent sample. The post also mentioned EmberLoader-37 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "a1b2e5165a3f1ed653e0ded852215503a3e921135322f7d3d454d020b814d1f7",
+      "word_count": 133
+    },
+    {
+      "id": "SYN-038",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Copper Viper 38 claimed to hold internal records. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The post directed readers to node-038[.]example and listed contact038[@]example[.]org for fictional negotiations. It identified 192.0.2[.]58 as a test mirror and used SHA-256 275d3521594bfd3a0b7b9e245cfd638852f5b629296a999310c48e70564851fa as the identifier for a non-existent sample. The post also mentioned CopperLock-38 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "e8dc6b96c25403dce8b0222333cc93a327b09b362c3637e0d9a7122a84e59381",
+      "word_count": 137
+    },
+    {
+      "id": "SYN-039",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Mosi Shadow 39 claimed to hold internal records. The claimed target was Example Solwezi Services 39, an invented Zambian organisation based in Solwezi. The post directed readers to node-039[.]example and listed contact039[@]example[.]org for fictional negotiations. It identified 192.0.2[.]59 as a test mirror and used SHA-256 ad147acfa06da55f0bc0bba4de1ef6aa15d964fb81fef3a807c2d76da817075d as the identifier for a non-existent sample. The post also mentioned MosiStealer-39 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "30985454a1a7488e9323a6c95125a7bad3b787d8a91297f9496d6ba988cf9db7",
+      "word_count": 133
+    },
+    {
+      "id": "SYN-040",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Kafue Fox 40 claimed to hold internal records. The claimed target was Example Mongu Services 40, an invented Zambian organisation based in Mongu. The post directed readers to node-040[.]example and listed contact040[@]example[.]org for fictional negotiations. It identified 192.0.2[.]60 as a test mirror and used SHA-256 d06e10eed92e089b989bff40972e9d7f0fb32cade88d984bfab037d99e849622 as the identifier for a non-existent sample. The post also mentioned KafueCrypt-40 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "fe87a5319c62db3fd616c771b3b0759f8a4d6cfcada9b14f3dbe239ea6202a7f",
+      "word_count": 133
+    },
+    {
+      "id": "SYN-041",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Zambezi Raven 41 claimed to hold internal records. The claimed target was Example Lusaka Services 41, an invented organisation outside Zambia, and the text gave no Zambian connection. The post directed readers to node-041[.]example and listed contact041[@]example[.]org for fictional negotiations. It identified 192.0.2[.]61 as a test mirror and used SHA-256 1c7b6e06c85fd754d8ce5e14fc9e15a6076c46f5ff1b729132deb396c0061802 as the identifier for a non-existent sample. The post also mentioned ZedRat-41 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "84816f2a1a045eca31c428c31578475c420c6697991426a83398503d2c823f55",
+      "word_count": 138
+    },
+    {
+      "id": "SYN-042",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. A leak-style post attributed to the fictional group Luangwa Wolf 42 claimed to hold internal records. The post mentioned Southern African buyers and prices in kwacha, but it did not identify a specific Zambian victim. The post directed readers to node-042[.]example and listed contact042[@]example[.]org for fictional negotiations. It identified 192.0.2[.]62 as a test mirror and used SHA-256 0c390f4806f7a5ecfcc64ceae2302562c0003084b05f11ead0c3bdece8796f7f as the identifier for a non-existent sample. The post also mentioned LuangwaDropper-42 as the alleged collection tool. No real documents, personal information or credentials are included. The claim has not been independently confirmed and must not be repeated as a verified breach. This synthetic record tests data-leak classification, evidence traceability, IOC extraction and whether summaries preserve uncertainty.",
+      "source_class": "synthetic",
+      "content_sha256": "5d01cd40d4cfce6b15f13ed5b11493f0a05ca9e2cf8d3b021f67d3bfcd11b3ef",
+      "word_count": 137
+    },
+    {
+      "id": "SYN-043",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 43. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-043[.]example and the defanged contact help043[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "ae9121105019dd7efd78139c650c5b1eed5b617e22eeac542262a8f549892877",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-044",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 44. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-044[.]example and the defanged contact help044[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "515b8c807518f51e3928142352faef0c6d8326d3d57cc0238ec3132a38e86775",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-045",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 45. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-045[.]example and the defanged contact help045[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "6e6dc84b46d6e655fef85b58c980e5b57b1acecfcd74a71ce698cf538616ec65",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-046",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 46. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-046[.]example and the defanged contact help046[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "ac132b0b4207464dad0885dca8bb2f11ed2b467e5b130de3cd5496379f8565ba",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-047",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 47. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-047[.]example and the defanged contact help047[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "4e8aeef295b637aa7c5c3b60f539059c9f2129fa3879ece5964c8c9e6881f656",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-048",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 48. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-048[.]example and the defanged contact help048[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "f4841cb23beece438a27429e5913800b1605698a644d1014ed73502569a5e1cb",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-049",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 49. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-049[.]example and the defanged contact help049[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "f6d3d51f73d852186ac78fe8d64b658e97c40b6324ec6da0c71005e2d2112234",
+      "word_count": 124
+    },
+    {
+      "id": "SYN-050",
+      "text": "This is a synthetic training document. Every name and event is fictional, and all technical indicators are reserved or defanged test values. This page is an ordinary fictional technology catalogue for Example Training Shop 50. It describes books, keyboards, office software, classroom schedules and customer-support hours. The catalogue displays the reserved support address support-050[.]example and the defanged contact help050[@]example[.]org. These values are ordinary synthetic contact details, not threat infrastructure. The page does not describe malware, a threat actor, stolen data, credential sales, fraud, hacking services, a target organisation or a cyber incident. It contains no allegation involving Zambia. The document is included as a negative control so that annotators and the platform can demonstrate that a technical-looking address should not automatically become cyber-threat intelligence.",
+      "source_class": "synthetic",
+      "content_sha256": "059597beff3a0f51c62e3bbf2cabdf237fb0a08504e28e10673fd2d63b61fbfd",
+      "word_count": 124
+    }
+  ]
+}
