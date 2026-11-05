@@ -45,8 +45,10 @@ yarn-error.log
 Thumbs.db
 
 # Project-specific (large/generated)
-investigations/
-!web/app/investigations/
+# Only exclude runtime investigation data at the repository root. An
+# unanchored pattern also removes the Next.js investigation pages and API
+# routes from clean Docker builds.
+/investigations/
 seed_data.json.gz
 **/chroma_db/
 /public/

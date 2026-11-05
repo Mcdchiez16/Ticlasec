@@ -17,8 +17,10 @@ Tor, and the optional WhatsApp bridge remain on the private Compose network.
 1. In Coolify, create a project and production environment.
 2. Add the private Git repository through a GitHub App or read-only deploy key.
 3. Select **Docker Compose** as the build strategy.
-4. Use `/` as the base directory and `/docker-compose.coolify.yml` as the
-   Compose location.
+4. Use `/` as the base directory and `docker-compose.coolify.yml` as the
+   Compose location. The location is relative to the base directory; confirm
+   the deployment command names `docker-compose.coolify.yml`, not the local
+   development file `docker-compose.yml`.
 5. Add a domain to the `nextjs` service using internal port 3000, for example
    `https://ticlasec.example.com:3000`.
 6. Do not create domains or public port mappings for `fastapi`, `postgres`,
@@ -75,6 +77,11 @@ The command prompts for the password without placing it in shell history.
    dataset SHA-256 is
    `c4f1a6228611512fe769206d732ab08dcead5ebf20ebd420bdb2bf782a9be7b1`.
 5. Run a built-in synthetic investigation before enabling live collection.
+
+If deployment logs show `-f .../docker-compose.yml`, return to the build
+configuration and correct the Compose location before troubleshooting service
+variables. The local development Compose file publishes workstation ports and
+expects a local research-secret mount; it is not the Coolify definition.
 
 ## Persistence and backups
 
