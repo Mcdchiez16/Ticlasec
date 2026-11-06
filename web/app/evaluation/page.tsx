@@ -157,8 +157,7 @@ export default function EvaluationPage() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
           <div>
-            <Link href="/research" className="text-[11px] font-bold uppercase tracking-wider text-[var(--accent-text)] hover:underline">Proposal readiness & annotation workflow →</Link>
-            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">Research evaluation workbench</h1>
+            <h1 className="text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">Research evaluation workbench</h1>
             <p className="mt-2 max-w-3xl text-[13px] leading-6 text-[var(--text-secondary)]">
               Compare baseline and improved predictions against the same annotated evidence. Default targets follow the proposal; custom targets are labelled. The evaluator makes no AI or Tor requests.
             </p>

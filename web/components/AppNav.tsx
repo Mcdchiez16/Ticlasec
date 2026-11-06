@@ -16,7 +16,6 @@ const ITEMS: Item[] = [
   { href: "/investigations", label: "Investigations", short: "Cases", icon: FolderSearch },
   { href: "/monitor", label: "Monitoring", short: "Monitor", icon: Radar, badge: true },
   { href: "/evaluation", label: "Evaluation", short: "Eval", icon: ClipboardCheck },
-  { href: "/research", label: "Research readiness", short: "Research", icon: ClipboardCheck },
   { href: "/docs", label: "Documentation", short: "Docs", icon: BookOpen },
 ];
 const SETTINGS: Item = { href: "/settings", label: "Settings", short: "Settings", icon: Settings };
